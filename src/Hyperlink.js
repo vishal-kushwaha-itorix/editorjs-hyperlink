@@ -320,6 +320,9 @@ export default class Hyperlink {
             anchorTag = this.selection.findParentTag('A');
         }
         if(anchorTag) {
+            if(!!link){
+                anchorTag['href'] = link;
+            }
             if(!!target) {
                 anchorTag['target'] = target;
             }else{
